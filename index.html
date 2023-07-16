@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div id="nav-container" class="container my-5">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="pills-welcome-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-welcome"
+            type="button"
+            role="tab"
+            aria-controls="pills-welcome"
+            aria-selected="true"
+          >
+            Bienvenida
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-info-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-info"
+            type="button"
+            role="tab"
+            aria-controls="pills-info"
+            aria-selected="false"
+          >
+            Datos Generales
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-questions-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-questions"
+            type="button"
+            role="tab"
+            aria-controls="pills-questions"
+            aria-selected="false"
+          >
+            Preguntas UP
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="pills-thanks-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-thanks"
+            type="button"
+            role="tab"
+            aria-controls="pills-thanks"
+            aria-selected="false"
+          >
+            Gracias
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-welcome"
+          role="tabpanel"
+          aria-labelledby="pills-welcome-tab"
+        >
+          <h2 class="mb-4">¡Bienvenido!</h2>
+          <p>
+            Agradecemos tu participación en este cuestionario diseñado para un
+            proyecto con propósitos educativos. Queremos asegurarte que todos
+            los datos recopilados serán tratados de manera privada y
+            confidencial.
+          </p>
+          <p>
+            Queremos enfatizar que tus respuestas y datos personales no serán
+            compartidos con terceros. La privacidad y seguridad de tus
+            respuestas son de suma importancia para nosotros. Todo el contenido
+            del cuestionario y la información proporcionada serán utilizados
+            exclusivamente por los propietarios del formulario con el fin de
+            analizar y evaluar los resultados del proyecto educativo.
+          </p>
+          <div class="nav-buttons mt-4 mb-3 text-end">
+            <button class="btn btn-primary" onclick="goToTab('pills-info-tab')">
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-info"
+          role="tabpanel"
+          aria-labelledby="pills-info-tab"
+        >
+          <div class="mb-3">
+            <label for="id" class="form-label">ID: </label>
+            <input type="text" id="id" class="form-control" />
+          </div>
+
+          <div class="mb-3">
+            <label for="nombres" class="form-label">Nombre(s): </label>
+            <input type="text" id="nombres" class="form-control" />
+          </div>
+
+          <div class="mb-3">
+            <label for="apellido" class="form-label">Apellidos: </label>
+            <input type="text" id="apellido" class="form-control" />
+          </div>
+
+          <div class="mb-3">
+            <label for="fechaNacimiento" class="form-label"
+              >Fecha de nacimiento:
+            </label>
+            <input type="date" id="fechaNacimiento" class="form-control" />
+          </div>
+          <div class="nav-buttons mt-5 text-end">
+            <button
+              class="btn btn-secondary me-2"
+              onclick="goToTab('pills-welcome-tab')"
+            >
+              Anterior
+            </button>
+            <button
+              class="btn btn-primary"
+              onclick="goToTab('pills-questions-tab')"
+            >
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-questions"
+          role="tabpanel"
+          aria-labelledby="pills-questions-tab"
+        >
+          <div class="mb-3">
+            <label for="cicloIngreso" class="form-label"
+              >Ciclo de ingreso:
+            </label>
+            <select id="cicloIngreso" class="form-select">
+              <option value="1232">1232 (Enero 2023)</option>
+              <option value="1228">1228 (Agosto 2022)</option>
+              <option value="1222">1222 (Enero 2022)</option>
+              <option value="1218">1218 (Agosto 2021)</option>
+              <option value="1212">1212 (Enero 2021)</option>
+              <option value="1208">1208 (Agosto 2020)</option>
+              <option value="1202">1202 (Enero 2020)</option>
+              <option value="1198">1198 (Agosto 2019)</option>
+              <option value="1192">1192 (Enero 2019)</option>
+              <option value="1188">1188 (Agosto 2018)</option>
+              <option value="1182">1182 (Enero 2018)</option>
+              <option value="1178">1178 (Agosto 2017)</option>
+              <option value="1172">1172 (Enero 2017)</option>
+              <option value="1168">1168 (Agosto 2016)</option>
+              <option value="1162">1162 (Enero 2016)</option>
+              <option value="1158">1158 (Agosto 2015)</option>
+              <option value="1152">1152 (Enero 2015)</option>
+              <option value="1148">1148 (Agosto 2014)</option>
+              <option value="1142">1142 (Enero 2014)</option>
+              <option value="1138">1138 (Agosto 2013)</option>
+              <option value="1132">1132 (Enero 2013)</option>
+              <option value="1128">1128 (Agosto 2012)</option>
+              <option value="1122">1122 (Enero 2012)</option>
+              <option value="1118">1118 (Agosto 2011)</option>
+              <option value="1112">1112 (Enero 2011)</option>
+              <option value="1108">1108 (Agosto 2010)</option>
+              <option value="1102">1102 (Enero 2010)</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="cicloEgreso" class="form-label"
+              >Ciclo de egreso:
+            </label>
+            <select id="cicloEgreso" class="form-select">
+              <option value="1288">1288 (Diciembre 2028)</option>
+              <option value="1282">1282 (Junio 2028)</option>
+              <option value="1278">1278 (Diciembre 2027)</option>
+              <option value="1272">1272 (Junio 2027)</option>
+              <option value="1268">1268 (Diciembre 2026)</option>
+              <option value="1262">1262 (Junio 2026)</option>
+              <option value="1258">1258 (Diciembre 2025)</option>
+              <option value="1252">1252 (Junio 2025)</option>
+              <option value="1248">1248 (Diciembre 2024)</option>
+              <option value="1242">1242 (Junio 2024)</option>
+              <option value="1238">1238 (Diciembre 2023)</option>
+              <option value="1232">1232 (Junio 2023)</option>
+              <option value="1228">1228 (Diciembre 2022)</option>
+              <option value="1222">1222 (Junio 2022)</option>
+              <option value="1218">1218 (Diciembre 2021)</option>
+              <option value="1212">1212 (Junio 2021)</option>
+              <option value="1208">1208 (Diciembre 2020)</option>
+              <option value="1202">1202 (Junio 2020)</option>
+              <option value="1198">1198 (Diciembre 2019)</option>
+              <option value="1192">1192 (Junio 2019)</option>
+              <option value="1188">1188 (Diciembre 2018)</option>
+              <option value="1182">1182 (Junio 2018)</option>
+              <option value="1178">1178 (Diciembre 2017)</option>
+              <option value="1172">1172 (Junio 2017)</option>
+              <option value="1168">1168 (Diciembre 2016)</option>
+              <option value="1162">1162 (Junio 2016)</option>
+              <option value="1158">1158 (Diciembre 2015)</option>
+              <option value="1152">1152 (Junio 2015)</option>
+              <option value="1148">1148 (Diciembre 2014)</option>
+              <option value="1142">1142 (Junio 2014)</option>
+              <option value="1138">1138 (Diciembre 2013)</option>
+              <option value="1132">1132 (Junio 2013)</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="campus" class="form-label">Campus: </label>
+            <select
+              id="campus"
+              class="form-select"
+              onchange="updateFacultad()"
+            ></select>
+          </div>
+
+          <div class="mb-3">
+            <label for="facultad" class="form-label">Facultad/Escuela: </label>
+            <select
+              id="facultad"
+              class="form-select"
+              onchange="updateCarrera()"
+            ></select>
+          </div>
+
+          <div class="mb-3">
+            <label for="carrera" class="form-label">Carrera: </label>
+            <select id="carrera" class="form-select"></select>
+          </div>
+          <div class="nav-buttons mt-5 text-end">
+            <button
+              class="btn btn-secondary me-2"
+              onclick="goToTab('pills-info-tab')"
+            >
+              Anterior
+            </button>
+            <button
+              id="submit"
+              class="btn btn-primary"
+              onclick="goToTab('pills-thanks-tab')"
+            >
+              Enviar
+            </button>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-thanks"
+          role="tabpanel"
+          aria-labelledby="pills-thanks-tab"
+        >
+          <h2 class="mb-4">¡Gracias por tu tiempo!</h2>
+          <p>
+            Apreciamos sinceramente el tiempo que has dedicado a completar
+            nuestro cuestionario. Tu participación es invaluable y nos ayudará a
+            obtener información importante para nuestro proyecto educativo.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./scripts/dataSubmit.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
