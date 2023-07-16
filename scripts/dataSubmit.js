@@ -19,45 +19,16 @@ let formData = {
   carrera: "",
 };
 
-document.getElementById("id").addEventListener("change", function () {
-  formData.id = this.value;
-});
-
-document.getElementById("nombres").addEventListener("change", function () {
-  formData.nombres = this.value;
-});
-
-document.getElementById("apellido").addEventListener("change", function () {
-  formData.apellidos = this.value;
-});
-
-document
-  .getElementById("fechaNacimiento")
-  .addEventListener("change", function () {
-    formData.fechaNacimiento = this.value;
-  });
-
-document.getElementById("cicloIngreso").addEventListener("change", function () {
-  formData.cicloIngreso = this.value;
-});
-
-document.getElementById("cicloEgreso").addEventListener("change", function () {
-  formData.cicloEgreso = this.value;
-});
-
-document.getElementById("campus").addEventListener("change", function () {
-  formData.campus = this.value;
-});
-
-document.getElementById("facultad").addEventListener("change", function () {
-  formData.facultad = this.value;
-});
-
-document.getElementById("carrera").addEventListener("change", function () {
-  formData.carrera = this.value;
-});
-
 document.getElementById("submit").addEventListener("click", async (e) => {
+  formData.id = document.getElementById("id").value;
+  formData.genero = document.getElementById("genero").value;
+  formData.fechaNacimiento = document.getElementById("fechaNacimiento").value;
+  formData.cicloIngreso = document.getElementById("cicloIngreso").value;
+  formData.cicloEgreso = document.getElementById("cicloEgreso").value;
+  formData.campus = document.getElementById("campus").value;
+  formData.facultad = document.getElementById("facultad").value;
+  formData.carrera = document.getElementById("carrera").value;
+
   e.preventDefault();
   try {
     saveData(formData);
@@ -69,8 +40,7 @@ document.getElementById("submit").addEventListener("click", async (e) => {
 const saveData = (formData) => {
   addDoc(collection(db, "alumnos"), {
     ID: formData.id,
-    Nombres: formData.nombres,
-    Apellidos: formData.apellidos,
+    Genero: formData.genero,
     FechaDeNacimiento: formData.fechaNacimiento,
     CicloDeIngreso: formData.cicloIngreso,
     CicloDeEgreso: formData.cicloEgreso,
